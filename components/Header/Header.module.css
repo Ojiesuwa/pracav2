@@ -1,0 +1,118 @@
+.header {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--padding);
+  overflow-y: visible;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoWrapper img {
+  height: 40px;
+}
+
+.informationWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  overflow-y: visible;
+}
+
+/* Profile Image Wrapper */
+
+.profileImageWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.profileImageWrapper:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.profileImageWrapper:hover i {
+  color: var(--accent);
+}
+
+.profileImageWrapper i {
+  font-size: 10px;
+}
+
+.profileImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Credit wrapper */
+
+.creditWrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 35px;
+  border-radius: 18px;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  gap: 10px;
+}
+
+.creditWrapper:hover {
+  cursor: pointer;
+}
+
+.creditWrapper:hover i {
+  transform: scale(1.2);
+}
+
+.creditWrapper:hover p {
+  transform: scale(0.9);
+}
+
+.creditWrapper p {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.creditWrapper i {
+  color: gold;
+}
+
+.dropDownWrapper {
+  position: fixed;
+  right: 20px;
+  top: 60px;
+  height: fit-content;
+  width: fit-content;
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    padding: 0 10px;
+  }
+
+  .creditWrapper {
+    padding: 0 10px;
+  }
+  .creditWrapper:hover i {
+    transform: none;
+  }
+  .creditWrapper:hover p {
+    transform: none;
+  }
+  .profileImageWrapper:hover {
+    transform: none;
+  }
+  .profileImageWrapper:hover i {
+    color: unset;
+  }
+}

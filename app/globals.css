@@ -1,6 +1,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --accent: #4db8ff;
+
+  --accent-dark: #4db8ffc4;
+  --accent-border: #0470d6;
+
+  --padding: 30px;
+  --padding-small: 20px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,15 +27,22 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  transition: 0.2s ease;
+  -webkit-tap-highlight-color: transparent; /* For iOS Safari */
+  -webkit-touch-callout: none; /* Prevents callout menu */
+  -webkit-user-select: none; /* Disable text selection (Safari/Chrome) */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Standard */
+  -webkit-touch-callout: none; /* Disable callout (like image save menu) on iOS */
+  outline: none;
 }
 
 a {
