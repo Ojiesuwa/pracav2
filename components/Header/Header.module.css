@@ -6,6 +6,7 @@
   justify-content: space-between;
   padding: 0 var(--padding);
   overflow-y: visible;
+  z-index: 400;
 }
 
 .logoWrapper {
@@ -93,6 +94,7 @@
   top: 60px;
   height: fit-content;
   width: fit-content;
+  z-index: 400;
 }
 
 @media screen and (max-width: 700px) {

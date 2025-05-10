@@ -21,6 +21,10 @@ export default function AvatarDropDown({ isVisible }: AvatarDropDownType) {
         <p>Interview History</p>
       </div>
       <div className={styles.dropdownItem}>
+        <i className="fa-light fa-calendar"></i>
+        <p>Scheduled Interview</p>
+      </div>
+      <div className={styles.dropdownItem}>
         <i className="fa-light fa-arrow-right-from-bracket"></i>
         <p>Signout</p>
       </div>

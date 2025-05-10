@@ -1,5 +1,6 @@
-import React from "react";
+import Home from "@/components/Home/Home";
+import React, { useEffect } from "react";
 
 export default function InterviewList() {
-  return <div>page</div>;
+  return <Home />;
 }

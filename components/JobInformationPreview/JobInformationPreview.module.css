@@ -1,0 +1,122 @@
+.jobPreview {
+  height: 100%;
+  width: 400px;
+  flex-shrink: 0;
+  padding-left: var(--padding);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.jobPreviewInactive {
+  width: 0;
+  transform: scaleX(0);
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  max-width: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 20px;
+}
+
+.subHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subHeader i {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.subHeader p {
+  font-size: 12px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.iconWrapper {
+  padding-top: 5px;
+}
+
+.body {
+  overflow: auto;
+}
+
+.body p {
+  font-size: 13px;
+  opacity: 0.8;
+  line-height: 180%;
+}
+
+.body .footer {
+  display: flex;
+  gap: 10px;
+  padding: 20px 0 40px;
+}
+
+.body .footer button {
+  width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .jobPreview {
+    height: 70svh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 300;
+    flex-shrink: 0;
+    padding-left: var(--padding);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    background-color: var(--background-light);
+    padding-top: 30px;
+    padding-right: var(--padding);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  .jobPreviewInactive {
+    height: 70svh;
+    width: 100vw;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    z-index: 300;
+    padding-left: var(--padding);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    background-color: var(--background);
+    padding-top: 30px;
+    padding-right: var(--padding);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    transform: none;
+    opacity: 1;
+    overflow: hidden;
+    pointer-events: none;
+    max-width: unset;
+  }
+}

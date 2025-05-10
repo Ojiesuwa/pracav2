@@ -1,0 +1,112 @@
+.appointmentCallWrapper {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  z-index: 250;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(2, 105, 196, 0.2);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+}
+
+.appointmentCallWrapperInactive {
+  position: fixed;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  z-index: 250;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(2, 105, 196, 0.2);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 15px;
+}
+
+.callDetailWrapper {
+  width: 100%;
+  margin-left: 5px;
+}
+
+.companyName {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+.role {
+  font-size: 10px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+.accept {
+  color: rgb(0, 214, 0);
+}
+
+.decline {
+  color: red;
+}
+
+.callActionWrapper {
+  width: fit-content;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.callActionWrapper i {
+  font-size: 22px;
+}
+
+.callActionWrapper i:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 700px) {
+  .appointmentCallWrapper {
+    width: calc(100svw - 20px);
+    right: 10px;
+    bottom: 10px;
+    top: unset;
+    height: 70px;
+  }
+  .appointmentCallWrapperInactive {
+    width: calc(100svw - 20px);
+    right: 10px;
+    bottom: -70px;
+    top: unset;
+    height: 70px;
+  }
+  .companyName {
+    font-size: 15px;
+  }
+  .componentIcon {
+    font-size: 19px;
+  }
+  .callActionWrapper i {
+    font-size: 30px;
+  }
+  .callActionWrapper i:hover {
+    transform: none;
+  }
+  .callActionWrapper i:active {
+    transition: 0.1s linear;
+    transform: scale(1.2);
+  }
+}
