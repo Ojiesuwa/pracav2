@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import styles from "./Home.module.css";
 import InterviewPostingItem from "@/components/InterviewPostingItem/InterviewPostingItem";
@@ -24,7 +23,7 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.home}>
+    <div className={"fade " + styles.home}>
       <div className={styles.main}>
         <div className={styles.searchWrapper}>
           <div className={styles.searchInputWrapper}>

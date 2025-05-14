@@ -96,6 +96,9 @@
   width: fit-content;
   z-index: 400;
 }
+.logoWrapper:hover {
+  cursor: pointer;
+}
 
 @media screen and (max-width: 700px) {
   .header {
@@ -116,5 +119,8 @@
   }
   .profileImageWrapper:hover i {
     color: unset;
+  }
+  .logoWrapper:hover {
+    cursor: pointer;
   }
 }

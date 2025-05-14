@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./AppointmentCall.module.css";
+import { useRouter } from "next/navigation";
 
 interface PropTypes {
   isActive: boolean;
@@ -7,6 +8,7 @@ interface PropTypes {
 }
 export default function AppointmentCall({ isActive, onDecline }: PropTypes) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const router = useRouter();
 
   useEffect(() => {
     if (audioRef.current) {
@@ -34,7 +36,10 @@ export default function AppointmentCall({ isActive, onDecline }: PropTypes) {
         <p className={styles.role}>React JS Developer</p>
       </div>
       <div className={styles.callActionWrapper}>
-        <i className={styles.accept + " fa-solid fa-circle-phone"}></i>
+        <i
+          className={styles.accept + " fa-solid fa-circle-phone"}
+          onClick={() => router.push("/interviews/1234")}
+        ></i>
         <i
           className={styles.decline + " fa-solid fa-circle-phone"}
           onClick={onDecline}

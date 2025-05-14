@@ -2,29 +2,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Header.module.css";
 import AvatarDropDown from "../AvatarDropDown/AvatarDropDown";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [isDropdownVisible, setIsDropDownVisible] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
-  // useEffect(() => {
-  //   const handleClickOutside = (event: MouseEvent) => {
-  //     if (
-  //       dropdownRef.current &&
-  //       !dropdownRef.current.contains(event.target as Node)
-  //     ) {
-  //       setIsDropDownVisible(false);
-  //     }
-  //   };
-
-  //   document.addEventListener("mousedown", handleClickOutside);
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, []);
   return (
-    <div className={styles.header}>
-      <div className={styles.logoWrapper}>
+    <div className={" fade-down " + styles.header}>
+      <div className={styles.logoWrapper} onClick={() => router.push("/")}>
         <img src="/logo2.png" alt="" />
         <h3>Praca</h3>
       </div>
@@ -54,8 +41,10 @@ export default function Header() {
             }`}
           ></i>
         </div>
-          <AvatarDropDown isVisible={isDropdownVisible} />
-  
+        <AvatarDropDown
+          isVisible={isDropdownVisible}
+          onHide={() => setIsDropDownVisible(false)}
+        />
       </div>
     </div>
   );

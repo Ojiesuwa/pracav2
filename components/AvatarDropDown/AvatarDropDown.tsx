@@ -1,18 +1,30 @@
 import React from "react";
 import styles from "./AvatarDropDown.module.css";
+import { useRouter } from "next/navigation";
 
 interface AvatarDropDownType {
   isVisible: boolean;
+  onHide: () => void;
 }
 
-export default function AvatarDropDown({ isVisible }: AvatarDropDownType) {
+export default function AvatarDropDown({
+  isVisible,
+  onHide,
+}: AvatarDropDownType) {
+  const router = useRouter();
   return (
     <div
       className={
         styles.avatarDropDown + " " + (!isVisible && styles.avatarInactive)
       }
     >
-      <div className={styles.dropdownItem}>
+      <div
+        className={styles.dropdownItem}
+        onClick={() => {
+          router.push("/account");
+          onHide();
+        }}
+      >
         <i className="fa-solid fa-user"></i>
         <p>Account</p>
       </div>

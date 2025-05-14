@@ -1,0 +1,102 @@
+.animationContainer {
+  width: fit-content;
+  display: flex;
+  gap: 5px;
+  height: 40px;
+  align-items: center;
+  margin-bottom: -20px;
+}
+
+.animationContainerAnimating {
+  width: fit-content;
+  display: flex;
+  gap: 5px;
+  height: 40px;
+  align-items: center;
+  margin-bottom: -20px;
+}
+
+.bubble {
+  width: 7px;
+  height: 7px;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.animationContainerAnimating .bubble1 {
+  animation: bubble1Anim 0.3s ease-in infinite;
+}
+
+@keyframes bubble1Anim {
+  0% {
+    height: 7px;
+  }
+  50% {
+    height: 40%;
+  }
+  70% {
+    height: 7px;
+  }
+}
+
+.animationContainerAnimating .bubble2 {
+  animation: bubble2Anim 0.4s ease-in infinite;
+}
+
+@keyframes bubble2Anim {
+  0% {
+    height: 7px;
+  }
+  50% {
+    height: 60%;
+  }
+  70% {
+    height: 7px;
+  }
+}
+.animationContainerAnimating .bubble3 {
+  animation: bubble3Anim 0.5s infinite;
+}
+
+@keyframes bubble3Anim {
+  0% {
+    height: 7px;
+  }
+  50% {
+    height: 100%;
+  }
+  70% {
+    height: 7px;
+  }
+}
+.animationContainerAnimating .bubble4 {
+  animation: bubble4Anim 0.6s infinite;
+}
+
+@keyframes bubble4Anim {
+  0% {
+    height: 7px;
+  }
+  50% {
+    height: 60%;
+  }
+  70% {
+    height: 7px;
+  }
+}
+
+.animationContainerAnimating .bubble5 {
+  animation: bubble5Anim 0.3s ease-in infinite;
+}
+
+@keyframes bubble5Anim {
+  0% {
+    height: 7px;
+  }
+  50% {
+    height: 40%;
+  }
+  70% {
+    height: 7px;
+  }
+}

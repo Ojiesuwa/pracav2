@@ -1,0 +1,131 @@
+.page {
+  width: 100%;
+  height: calc(100svh - 55px);
+  /* padding: 0 var(--padding); */
+  display: flex;
+  flex-direction: column;
+  /* padding: 10px 0 0; */
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 10px var(--padding) 15px;
+  display: flex;
+}
+
+.controlWrapper {
+  width: 100%;
+  height: 55px;
+  background-color: #1f1f1f;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--padding);
+}
+
+.controlWrapper h3 {
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.controlWrapper p {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Call Description */
+
+.descriptionContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.descriptionContainer i {
+  color: rgb(0, 226, 0);
+  font-size: 10px;
+}
+
+/* Chat controller*/
+.chatController {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* call controller */
+.callController {
+  /* flex-shrink: 0; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.actionIconWrapper {
+  width: 50px;
+  height: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+}
+
+.actionIconWrapper:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.callController .actionIconWrapper:last-child {
+  border-color: rgb(255, 121, 121);
+}
+
+.callController .actionIconWrapper:last-child i {
+  color: rgb(255, 121, 121);
+}
+
+/* call cell container */
+.callCellContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+.endCallWrapper {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .descriptionContainer {
+    display: none;
+  }
+
+  .callController {
+    justify-content: flex-start;
+    margin-left: 10px;
+    display: none;
+  }
+  .endCallWrapper {
+    display: flex;
+    border-color: rgb(255, 121, 121);
+  }
+  .endCallWrapper i {
+    color: rgb(255, 121, 121);
+  }
+  .chatController {
+    gap: 20px;
+  }
+  .main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

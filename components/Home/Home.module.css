@@ -88,6 +88,12 @@
   .home {
     padding: 0 10px;
   }
+  .searchWrapper {
+    margin-top: 15px;
+  }
+  .searchInputWrapper {
+    height: 55px;
+  }
   .searchWrapper button {
     display: none;
   }
